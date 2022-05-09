@@ -8,8 +8,8 @@ import styled from "@emotion/styled"
 interface ICheckboxControl {
   id: string
   onChange?: SwitchBaseProps["onChange"]
-  defaultChecked?: boolean
   label?: string
+  checked: boolean
 }
 
 const StyledCheckboxControlContainer = styled.div`
@@ -19,10 +19,10 @@ const StyledCheckboxControlContainer = styled.div`
   width: auto;
 `
 
-export const CheckboxControl: FunctionComponent<ICheckboxControl> = ({ id, label, onChange, defaultChecked }): ReactElement => {
+export const CheckboxControl: FunctionComponent<ICheckboxControl> = ({ id, label, checked, onChange }): ReactElement => {
   return (
     <StyledCheckboxControlContainer>
-      <Checkbox id={id} onChange={onChange} defaultChecked={defaultChecked} />
+      <Checkbox id={id} checked={checked} onChange={onChange} />
       {!!label && (
         <InputLabel style={{ zIndex: 1, color: colors.black, cursor: "pointer" }} htmlFor={id}>
           {label}

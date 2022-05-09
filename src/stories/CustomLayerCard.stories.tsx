@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState } from "react"
+import React, { useState } from "react"
 import image from "../asssets/mini_view.png"
 
 import { CustomLayerCard, ICustomLayerCard } from "../components/CustomLayerCard"
@@ -11,7 +11,7 @@ export default {
 } as ComponentMeta<typeof CustomLayerCard>
 
 const Template: ComponentStory<typeof CustomLayerCard> = (args: ICustomLayerCard) => {
-  const [checked, setChecked] = useState<boolean>(false)
+  const [checked, setChecked] = useState<boolean>(args.checked)
   return (
     <Section>
       <CustomLayerCard {...args} checked={checked} onChange={(e) => setChecked(e.target.checked)} />
@@ -23,7 +23,6 @@ export const Default = Template.bind({})
 Default.args = {
   id: "checkbox",
   label: "Flood zone 3",
-  defaultChecked: false,
   image: image,
   checked: false
 }

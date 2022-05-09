@@ -11,7 +11,6 @@ import styled from "@emotion/styled"
 export interface ICustomLayerCard {
   id: string
   label: string
-  defaultChecked?: boolean
   checked: boolean
   onChange: SwitchBaseProps["onChange"]
   image: string
@@ -27,14 +26,14 @@ const StyledCustomLayerCardContainer = styled.div`
   }
 `
 
-const CustomLayerCard: FunctionComponent<ICustomLayerCard> = ({ id, label, image, onChange, defaultChecked, checked }): ReactElement => (
+const CustomLayerCard: FunctionComponent<ICustomLayerCard> = ({ id, label, image, onChange, checked }): ReactElement => (
   <StyledCustomLayerCardContainer>
     <Card sx={{ maxWidth: 230 }} className={checked ? "checked" : ""}>
       <CardContent style={{ padding: 0 }}>
         <CardMedia component="img" height="100" image={image} />
       </CardContent>
       <CardActions>
-        <CheckboxControl id={id} label={label} onChange={onChange} defaultChecked={defaultChecked} />
+        <CheckboxControl id={id} checked={checked} label={label} onChange={onChange} />
       </CardActions>
     </Card>
   </StyledCustomLayerCardContainer>
