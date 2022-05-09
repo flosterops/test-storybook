@@ -16,7 +16,7 @@ function App() {
           checked={checked}
           image={image}
           id="default-card"
-          label="I am checkbox label"
+          label="Flood zone 3"
           onChange={(e) => {
             setChecked(e.target.checked)
           }}
