@@ -12,7 +12,7 @@ export default {
 
 const Template: ComponentStory<typeof CustomLayerCard> = (args: ICustomLayerCard) => {
   return (
-    <Section title="CheckboxControl component" description="Small description about CheckboxControl">
+    <Section>
       <CheckboxControl {...args} />
     </Section>
   )

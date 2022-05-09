@@ -13,7 +13,7 @@ export default {
 const Template: ComponentStory<typeof CustomLayerCard> = (args: ICustomLayerCard) => {
   const [checked, setChecked] = useState<boolean>(false)
   return (
-    <Section title="CustomLayerCard component" description="Small description about CustomLayerCard">
+    <Section>
       <CustomLayerCard {...args} checked={checked} onChange={(e) => setChecked(e.target.checked)} />
     </Section>
   )
