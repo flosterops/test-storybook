@@ -6,6 +6,7 @@ import Checkbox from "@mui/material/Checkbox"
 import { SwitchBaseProps } from "@mui/material/internal/SwitchBase"
 import InputLabel from "@mui/material/InputLabel"
 import { CardMedia } from "@mui/material"
+import { colors } from "../../theme"
 
 export interface ICustomLayerCard {
   id: string
@@ -20,11 +21,11 @@ export interface ICustomLayerCard {
 const CustomLayerCard: FunctionComponent<ICustomLayerCard> = ({ id, text, image, onChange, defaultChecked, checked, variant }): ReactElement => (
   <Card sx={{ maxWidth: 230, margin: "10px" }} className={checked ? "checked" : ""} variant={variant}>
     <CardContent style={{ padding: 0 }}>
-      <CardMedia component="img" height="140" image={image} />
+      <CardMedia component="img" height="100" image={image} />
     </CardContent>
     <CardActions>
       <Checkbox id={id} checked={checked} onChange={onChange} defaultChecked={defaultChecked} />
-      <InputLabel style={{ zIndex: 1 }} htmlFor={id}>
+      <InputLabel style={{ zIndex: 1, color: colors.black }} htmlFor={id}>
         {text}
       </InputLabel>
     </CardActions>
