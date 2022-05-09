@@ -19,8 +19,8 @@ export interface ICustomLayerCard {
 
 const StyledCustomLayerCardContainer = styled.div`
   display: flex;
-  border: 1px solid transparent;
-  border-radius: 10px;
+  border: 2px solid transparent;
+  border-radius: 12px;
   width: fit-content;
   &:hover {
     border-color: ${colors.main};
