@@ -22,7 +22,7 @@ const Template: ComponentStory<typeof CustomLayerCard> = (args: ICustomLayerCard
 export const Default = Template.bind({})
 Default.args = {
   id: "checkbox",
-  label: "I am text",
+  label: "Flood zone 3",
   defaultChecked: false,
   image: image,
   checked: false
