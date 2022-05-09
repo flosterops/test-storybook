@@ -20,34 +20,14 @@ export const theme = createTheme({
     MuiCard: {
       styleOverrides: {
         root: {
-          border: `1px solid ${colors.main}`,
           borderRadius: "10px",
           position: "relative",
           "&.checked": {
-            "&:after": {
-              content: "''",
-              position: "absolute",
-              zIndex: 0,
-              top: "-1px",
-              left: "-1px",
-              right: "-1px",
-              bottom: "-1px",
-              border: "2px solid",
-              borderColor: colors.dark,
-              borderRadius: "10px"
-            }
+            border: "1px solid",
+            borderColor: colors.dark
           }
         }
-      },
-      variants: [
-        {
-          props: { variant: "outlined" },
-          style: {
-            "box-shadow": "0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%), 0px 1px 3px 0px rgb(0 0 0 / 12%)",
-            border: "none"
-          }
-        }
-      ]
+      }
     }
   }
 })

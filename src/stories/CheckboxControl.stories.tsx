@@ -1,20 +1,19 @@
-import React, { FunctionComponent, useState } from "react"
-import image from "../asssets/mini_view.png"
+import React from "react"
 
 import { CustomLayerCard, ICustomLayerCard } from "../components/CustomLayerCard"
 import { ComponentMeta, ComponentStory } from "@storybook/react"
 import { Section } from "../../.storybook/components/Section"
+import { CheckboxControl } from "../components/CheckboxControl"
 
 export default {
-  component: CustomLayerCard,
-  title: "CustomLayerCard"
+  component: CheckboxControl,
+  title: "CheckboxControl"
 } as ComponentMeta<typeof CustomLayerCard>
 
 const Template: ComponentStory<typeof CustomLayerCard> = (args: ICustomLayerCard) => {
-  const [checked, setChecked] = useState<boolean>(false)
   return (
-    <Section title="CustomLayerCard component" description="Small description about CustomLayerCard">
-      <CustomLayerCard {...args} checked={checked} onChange={(e) => setChecked(e.target.checked)} />
+    <Section title="CheckboxControl component" description="Small description about CheckboxControl">
+      <CheckboxControl {...args} />
     </Section>
   )
 }
@@ -23,7 +22,5 @@ export const Default = Template.bind({})
 Default.args = {
   id: "checkbox",
   label: "I am text",
-  defaultChecked: false,
-  image: image,
-  checked: false
+  defaultChecked: false
 }
